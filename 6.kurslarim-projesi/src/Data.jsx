@@ -22,7 +22,7 @@ export const courses = [
     },
     {
         id: 3,
-        title: "Java Masterclass 2025: 130+ Hours of Expert Lessons",
+        title: "Java Masterclass 2025",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus debitis sequi ad magnam officia architecto id eius totam eligendi?",
         price: 520,
         link: "https://www.udemy.com/course/java-the-complete-java-developer-course/?couponCode=KEEPLEARNING",
@@ -30,7 +30,7 @@ export const courses = [
     },
     {
         id: 4,
-        title: "Sıfırdan İleri Seviye React Kursu : Güncel Eğitim 2024",
+        title: "Sıfırdan İleri Seviye React Kursu",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus debitis sequi ad magnam officia architecto id eius totam eligendi?",
         price: 120,
         link: "https://www.udemy.com/course/sfrdan-ileriye-seviye-react-kursu-guncel-egitim-2024/",
