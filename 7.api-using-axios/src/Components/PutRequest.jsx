@@ -7,12 +7,10 @@ const BASE_URL = "http://localhost:3000";
 function PutRequest() {
 
     const updateUser = async (userId, updatedUser) => {
-        debugger;
         await axios.put(`${BASE_URL}/users/${userId}`, updatedUser)
     }
 
     useEffect(() => {
-        debugger;
         const updatedUser = {
             "username": "gokhan",
             "email": "gokhan@outlook.com"

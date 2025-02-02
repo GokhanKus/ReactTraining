@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import GetRequest from './GetRequest';
-import PostRequest from './PostRequest';
-import PutRequest from './PutRequest';
+import GetRequest from './Components/GetRequest';
+import PostRequest from './Components/PostRequest';
+import PutRequest from './Components/PutRequest';
+import DeleteRequest from './Components/DeleteRequest';
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     <>
       {/* <GetRequest /> */}
       {/* <PostRequest /> */}
-      <PutRequest />
+      {/* <PutRequest /> */}
+      <DeleteRequest />
     </>
   )
 }
