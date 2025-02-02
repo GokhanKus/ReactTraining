@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import GetRequest from './GetRequest';
 import PostRequest from './PostRequest';
+import PutRequest from './PutRequest';
 
 function App() {
 
   return (
     <>
       {/* <GetRequest /> */}
-      <PostRequest />
+      {/* <PostRequest /> */}
+      <PutRequest />
     </>
   )
 }

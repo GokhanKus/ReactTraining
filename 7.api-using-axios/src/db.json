@@ -1,19 +1,19 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "Gokhan123",
-      "email": "gokhan@outlook.com"
+      "username": "gokhan",
+      "email": "gokhan@outlook.com",
+      "id": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "Deniz_111",
       "email": "deniz@outlook.com"
     },
     {
-      "id": "e75b",
-      "username": "Irmak1433",
-      "email": "irmak@outlook.com"
+      "username": "Pinar",
+      "email": "pinar@outlook.com",
+      "id": "e75b"
     }
   ]
 }
