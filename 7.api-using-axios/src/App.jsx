@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import GetRequest from './GetRequest';
+import PostRequest from './PostRequest';
 
 function App() {
 
   return (
     <>
-      <GetRequest />
+      {/* <GetRequest /> */}
+      <PostRequest />
     </>
   )
 }
