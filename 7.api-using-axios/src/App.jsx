@@ -4,6 +4,7 @@ import GetRequest from './Components/GetRequest';
 import PostRequest from './Components/PostRequest';
 import PutRequest from './Components/PutRequest';
 import DeleteRequest from './Components/DeleteRequest';
+import GetPostByUser from './Components/GetPostByUser';
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
       {/* <GetRequest /> */}
       {/* <PostRequest /> */}
       {/* <PutRequest /> */}
-      <DeleteRequest />
+      {/* <DeleteRequest /> */}
+      <GetPostByUser />
     </>
   )
 }
