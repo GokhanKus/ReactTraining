@@ -1,10 +1,14 @@
 import React from 'react'
 import Todo from './Todo'
 
-function TodoList() {
+function TodoList({ todoList }) {
     return (
         <div style={{ width: '100%', marginTop: '50px' }}>
-            <Todo />
+            {
+                todoList && todoList.map((todo) => (
+                    <Todo key={todo.id} todo={todo} />
+                ))
+            }
         </div>
     )
 }

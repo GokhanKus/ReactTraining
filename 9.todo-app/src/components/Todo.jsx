@@ -3,11 +3,12 @@ import { IoIosRemoveCircle } from "react-icons/io";
 import { MdEdit } from "react-icons/md";
 import '../App.css'
 
-function Todo() {
+function Todo({ todo }) {
+  const { id, content } = todo
   return (
     <div className='todo-box'>
       <div>
-        İlk todo
+        {content}
       </div>
       <div>
         <IoIosRemoveCircle className='todo-icons' />
