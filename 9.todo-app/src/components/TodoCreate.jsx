@@ -10,6 +10,7 @@ function TodoCreate({ onCreateTodo }) {
     }
 
     const createTodo = () => {
+        debugger
         if (!newTodo) return;
 
         const request = {

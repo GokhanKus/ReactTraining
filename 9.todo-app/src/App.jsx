@@ -8,6 +8,7 @@ function App() {
   const [todoList, setTodoList] = useState([]);
 
   const createTodo = (newTodo) => {
+    debugger
     setTodoList([...todoList, newTodo]); //onceden olan todo'lari aç sonra newTodo'yu ekle
   }
 
@@ -16,16 +17,27 @@ function App() {
     setTodoList(extractedArray);
   }
 
+  const updateTodo = (newTodo) => {
+    const updatedTodos = todoList.map((todo) => {
+      if (todo.id !== newTodo.id) {
+        return todo;
+      }
+      return newTodo;
+    })
+    setTodoList([...updatedTodos]);
+  }
+
+
   console.log(todoList);
   return (
     <div className='App'>
       <div className='main'>
         <TodoCreate onCreateTodo={createTodo} />
-        <TodoList todoList={todoList} onRemoveTodo={removeTodo} />
+        <TodoList todoList={todoList} onRemoveTodo={removeTodo} onUpdateTodo={updateTodo} />
       </div>
     </div >
   )
-}
 
+}
 export default App
 //redux ve context api bilmedigim icin simdilik props drilling (proplar ile veri tasima..) 
