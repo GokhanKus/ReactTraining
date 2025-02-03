@@ -5,14 +5,21 @@ import TodoList from './components/TodoList'
 
 function App() {
 
+  const [todoList, setTodoList] = useState([]);
+
+  const createTodo = (newTodo) => {
+    setTodoList([...todoList, newTodo]); //onceden olan todo'lari aç sonra newTodo'yu ekle
+  }
+  console.log(todoList);
   return (
     <div className='App'>
-      <div style={{ width: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <TodoCreate />
+      <div className='main'>
+        <TodoCreate onCreateTodo={createTodo} />
         <TodoList />
       </div>
-    </div>
+    </div >
   )
 }
 
 export default App
+//redux ve context api bilmedigim icin simdilik props drilling (proplar ile veri tasima..) 
