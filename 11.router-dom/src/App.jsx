@@ -9,6 +9,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import Header from './components/Header'
 import EmployeeAbout from './pages/EmployeeAbout'
 import CompanyAbout from './pages/CompanyAbout'
+import ProductDetails from './pages/ProductDetails'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         </Route>
 
         <Route path='/products' element={<Products />} />
+        <Route path='/product-details/:id' element={<ProductDetails />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFoundPage />} /> {/* eslesen url adresi yoksa bu sayfaya gitsin*/}
       </Routes>
