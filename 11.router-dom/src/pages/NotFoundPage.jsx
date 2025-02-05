@@ -2,7 +2,7 @@ import React from 'react'
 
 function NotFoundPage() {
     return (
-        <div>NotFoundPage</div>
+        <h1>NotFoundPage</h1>
     )
 }
 
