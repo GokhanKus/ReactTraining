@@ -1,10 +1,11 @@
 import React from 'react'
 import '../css/Product.css'
 import { FaArrowCircleRight } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 function Product({ product }) {
-    const { id, category, description, image, price, rating, title } = product;
-
+    const { id, image, price, title } = product;
+    const navigate = useNavigate();
     return (
         <div className='card'>
             <img className='image' src={image} alt='' />

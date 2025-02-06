@@ -1,0 +1,63 @@
+/* Ana konteyner */
+.product-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Resim alanı */
+.product-image {
+    margin-right: 40px;
+    width: 300px;
+    height: 400px;
+}
+
+/* Başlık ve açıklamalar */
+.product-title {
+    font-family: Arial, sans-serif;
+}
+
+.product-description {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.product-category {
+    font-family: Arial, sans-serif;
+}
+
+/* Fiyat */
+.product-price {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: lightsalmon;
+}
+
+/* Sayı artırma / azaltma alanı */
+.counter-container {
+    display: flex;
+    align-items: center;
+}
+
+.counter-icon {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.counter-number {
+    font-size: 35px;
+    margin: 0 5px;
+}
+
+/* Sepete ekle butonu */
+.add-to-cart {
+    margin-top: 25px;
+    border: none;
+    padding: 10px;
+    background-color: lightsalmon;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}

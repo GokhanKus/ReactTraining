@@ -3,11 +3,12 @@ import '../css/Header.css'
 import { FaBasketShopping } from "react-icons/fa6";
 import { FaMoon } from "react-icons/fa";
 import { CiLight } from "react-icons/ci";
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
     const [theme, setTheme] = useState(true);
-
+    const navigate = useNavigate();
     const changeTheme = () => {
         const root = document.getElementById("root");
         if (theme) {
@@ -22,7 +23,7 @@ function Header() {
     }
     return (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div className='flex-row'>
+            <div className='flex-row' style={{ cursor: 'pointer' }} onClick={() => navigate("/")}>
                 <img className='logo' src="./src/images/logo.png" />
                 <p className='logo-text'>E-Commerce App</p>
             </div>
