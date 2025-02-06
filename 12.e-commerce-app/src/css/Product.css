@@ -23,6 +23,10 @@
     border-radius: 5px;
     background-color: rgb(81, 80, 80);
     color: #fff;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .detail-button:hover {
