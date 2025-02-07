@@ -6,8 +6,12 @@ import Product from './Product';
 function ProductList() {
 
     const dispatch = useDispatch();
-    const { products } = useSelector(store => store.products)
-    console.log({ products });
+    const { products, searchText } = useSelector(store => store.products)
+
+    // Ürün başlıklarına göre filtreleme
+    const filteredProducts = products.filter((product) =>
+        product.title.toLowerCase().includes(searchText.toLowerCase())
+    );
 
     useEffect(() => {
         dispatch(getAllProducts());
@@ -15,13 +19,11 @@ function ProductList() {
 
     return (
         <div className='flex-row' style={{ flexWrap: 'wrap', marginTop: '25px' }}>
-            {
-                products && products.map((product) => (
-                    <Product key={product.id} product={product} />
-                ))
-            }
+            {filteredProducts.map((product) => (
+                <Product key={product.id} product={product} />
+            ))}
         </div>
-    )
+    );
 }
 
 export default ProductList

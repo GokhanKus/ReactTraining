@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDrawer } from '../redux/slices/basketSlice';
+import { setSearchText } from '../redux/slices/productSlice';
 
 function Header() {
 
@@ -16,6 +17,10 @@ function Header() {
     const { products } = useSelector(store => store.basket);
 
     const dispatch = useDispatch();
+
+    const handleSearch = (event) => {
+        dispatch(setSearchText(event.target.value)); // Arama metnini Redux'a gönderiyoruz
+    };
 
     const changeTheme = () => {
         const root = document.getElementById("root");
@@ -37,7 +42,7 @@ function Header() {
             </div>
 
             <div className='flex-row'>
-                <input className="search-input" type='text' placeholder='aramak istediğiniz ürünü giriniz' />
+                <input className="search-input" onChange={handleSearch} type='text' placeholder='aramak istediğiniz ürünü giriniz' />
                 <div>
                     {
                         theme ?
