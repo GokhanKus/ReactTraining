@@ -38,6 +38,12 @@ export const basketSlice = createSlice({
                 writeFromBasketToStorage(state.products);
             }
         },
+        removeFromTheBasket: (state, action) => {
+            const filteredProducts = state.products.filter((product) => product.id !== action.payload);
+            state.products = filteredProducts;
+
+            writeFromBasketToStorage(state.products); // LocalStorage'ı güncelle
+        },
         setDrawer: (state) => {
             state.drawer = !state.drawer;
         },
@@ -50,6 +56,6 @@ export const basketSlice = createSlice({
     }
 })
 
-export const { addBasket, setDrawer, calculateBasket } = basketSlice.actions
+export const { addBasket, setDrawer, calculateBasket, removeFromTheBasket } = basketSlice.actions
 
 export default basketSlice.reducer

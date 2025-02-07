@@ -1,7 +1,7 @@
 import React from 'react'
 import Drawer from '@mui/material/Drawer';
 import { useDispatch, useSelector } from 'react-redux'
-import { setDrawer, calculateBasket } from '../redux/slices/basketSlice'
+import { setDrawer, calculateBasket, removeFromTheBasket } from '../redux/slices/basketSlice'
 import { useEffect } from 'react'
 
 function BasketDrawer() {
@@ -13,6 +13,11 @@ function BasketDrawer() {
     dispatch(calculateBasket());
   }, [])
 
+  const removeFromBasket = (id) => {
+    dispatch(removeFromTheBasket(id));
+    dispatch(calculateBasket());
+  }
+
   return (
     <div>
       <Drawer className="drawer" anchor="right" open={drawer} onClose={() => dispatch(setDrawer())}>
@@ -21,7 +26,7 @@ function BasketDrawer() {
             <img src={product.image} width={50} height={50} />
             <p className="title">{product.title} <b>({product.count})</b></p>
             <p className="price">{product.price} ₺</p>
-            <button className="delete-button">Sil</button>
+            <button onClick={() => removeFromBasket(product.id)} className="delete-button">Sil</button>
           </div>
         ))}
         <div>
