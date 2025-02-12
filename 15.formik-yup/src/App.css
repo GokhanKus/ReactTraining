@@ -41,4 +41,10 @@ input {
   font-weight: bold;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+.input-errors {
+  font-size: 15px;
+  color: red;
 }
