@@ -3,7 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { TextField } from '@mui/material';
+import { Box, TextField } from '@mui/material';
 
 function MUISelect() {
     const [age, setAge] = useState('');
@@ -18,7 +18,7 @@ function MUISelect() {
     console.log(currency);
     console.log(currencies);
     return (
-        <div>
+        <Box>
             <FormControl sx={{ width: '150px' }}>
                 <InputLabel>Age</InputLabel>
                 <Select label="Age" value={age} onChange={handleChange}>
@@ -44,7 +44,7 @@ function MUISelect() {
                     <MenuItem value="EUR">Euro</MenuItem>
                 </Select>
             </FormControl>
-        </div>
+        </Box>
     );
 }
 

@@ -5,6 +5,7 @@ import MUICheckBox from './components/MUICheckBox'
 import MUISelect from './components/MUISelect'
 import MUITextField from './components/MUITextField'
 import MUIAutoComplete from './components/MUIAutoComplete'
+import MUIStack from './components/MUIStack'
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
       {/* <MUITextField /> */}
       {/* <MUISelect /> */}
       {/* <MUICheckBox /> */}
-      <MUIAutoComplete />
+      {/* <MUIAutoComplete /> */}
+      <MUIStack />
     </div>
   )
 }
