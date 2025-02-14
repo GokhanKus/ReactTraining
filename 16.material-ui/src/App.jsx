@@ -8,6 +8,7 @@ import MUIAutoComplete from './components/MUIAutoComplete'
 import MUIStack from './components/MUIStack'
 import MUIGrid from './components/MUIGrid'
 import MUICard from './components/MUICard'
+import MUIAccordion from './components/MUIAccordion'
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
       {/* <MUIAutoComplete /> */}
       {/* <MUIStack /> */}
       {/* <MUIGrid /> */}
-      <MUICard />
+      {/* <MUICard /> */}
+      <MUIAccordion />
     </div>
   )
 }
