@@ -7,6 +7,7 @@ import MUITextField from './components/MUITextField'
 import MUIAutoComplete from './components/MUIAutoComplete'
 import MUIStack from './components/MUIStack'
 import MUIGrid from './components/MUIGrid'
+import MUICard from './components/MUICard'
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
       {/* <MUICheckBox /> */}
       {/* <MUIAutoComplete /> */}
       {/* <MUIStack /> */}
-      <MUIGrid />
+      {/* <MUIGrid /> */}
+      <MUICard />
     </div>
   )
 }
