@@ -22,12 +22,13 @@ import MUIProgress from './components/MUIProgress'
 import MUISkeleton from './components/MUISkeleton'
 import MUITable from './components/MUITable'
 import MUITableDataGrid from './components/MUITableDataGrid'
+import MUITabs from './components/MUITabs'
 
 function App() {
 
   return (
     <div>
-      <MUITableDataGrid />
+      <MUITabs />
     </div>
   )
 }
