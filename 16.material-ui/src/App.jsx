@@ -1,4 +1,4 @@
-import { Autocomplete } from '@mui/material'
+import { Autocomplete, Skeleton } from '@mui/material'
 import './App.css'
 import MUIButton from './components/MUIButton'
 import MUICheckBox from './components/MUICheckBox'
@@ -19,12 +19,13 @@ import MUIAlert from './components/MUIAlert'
 import MUIDialog from './components/MUIDialog'
 import MUISnackbar from './components/MUISnackbar'
 import MUIProgress from './components/MUIProgress'
+import MUISkeleton from './components/MUISkeleton'
 
 function App() {
 
   return (
     <div>
-      <MUIProgress />
+      <MUISkeleton />
     </div>
   )
 }
