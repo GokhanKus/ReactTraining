@@ -16,27 +16,13 @@ import MUIBadge from './components/MUIBadge'
 import MUIAvatar from './components/MUIAvatar'
 import MUITooltip from './components/MUITooltip'
 import MUIAlert from './components/MUIAlert'
+import MUIDialog from './components/MUIDialog'
 
 function App() {
 
   return (
     <div>
-      {/* <MUIButton /> */}
-      {/* <MUITextField /> */}
-      {/* <MUISelect /> */}
-      {/* <MUICheckBox /> */}
-      {/* <MUIAutoComplete /> */}
-      {/* <MUIStack /> */}
-      {/* <MUIGrid /> */}
-      {/* <MUICard /> */}
-      {/* <MUIAccordion /> */}
-      {/* <MUIAppBar /> */}
-      {/* <MUIImageList /> */}
-      {/* <MUIDrawer /> */}
-      {/* <MUIBadge /> */}
-      {/* <MUIAvatar /> */}
-      {/* <MUITooltip /> */}
-      <MUIAlert />
+      <MUIDialog />
     </div>
   )
 }
