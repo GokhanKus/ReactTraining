@@ -20,12 +20,13 @@ import MUIDialog from './components/MUIDialog'
 import MUISnackbar from './components/MUISnackbar'
 import MUIProgress from './components/MUIProgress'
 import MUISkeleton from './components/MUISkeleton'
+import MUITable from './components/MUITable'
 
 function App() {
 
   return (
     <div>
-      <MUISkeleton />
+      <MUITable />
     </div>
   )
 }
