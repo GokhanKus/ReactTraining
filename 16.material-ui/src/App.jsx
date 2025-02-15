@@ -11,6 +11,7 @@ import MUICard from './components/MUICard'
 import MUIAccordion from './components/MUIAccordion'
 import MUIAppBar from './components/MUIAppBar'
 import MUIImageList from './components/MUIImageList'
+import MUIDrawer from './components/MUIDrawer'
 
 function App() {
 
@@ -26,7 +27,8 @@ function App() {
       {/* <MUICard /> */}
       {/* <MUIAccordion /> */}
       {/* <MUIAppBar /> */}
-      <MUIImageList />
+      {/* <MUIImageList /> */}
+      <MUIDrawer />
     </div>
   )
 }
