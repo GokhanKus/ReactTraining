@@ -21,12 +21,13 @@ import MUISnackbar from './components/MUISnackbar'
 import MUIProgress from './components/MUIProgress'
 import MUISkeleton from './components/MUISkeleton'
 import MUITable from './components/MUITable'
+import MUITableDataGrid from './components/MUITableDataGrid'
 
 function App() {
 
   return (
     <div>
-      <MUITable />
+      <MUITableDataGrid />
     </div>
   )
 }
