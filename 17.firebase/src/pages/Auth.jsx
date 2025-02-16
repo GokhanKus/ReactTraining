@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { FaGoogle } from "react-icons/fa";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { auth } from '../Firebase'
 import { useNavigate } from 'react-router-dom';
+
+const provider = new GoogleAuthProvider();
 
 function Auth() {
 
@@ -39,6 +41,20 @@ function Auth() {
         }
     }
 
+    const loginWithGoogle = async () => {
+        try {
+            const response = await signInWithPopup(auth, provider)
+            const credential = GoogleAuthProvider.credentialFromResult(response);
+            const token = credential.accessToken;
+            const user = response.user;
+            if (user) {
+                navigate('/');
+            }
+        }
+        catch (error) {
+            toast.error(error.message);
+        }
+    }
 
     return (
         <div className='auth'>
@@ -48,7 +64,7 @@ function Auth() {
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type='password' placeholder='Sifre' />
             </div>
             <div className='button-div'>
-                <button className='google-button'> <FaGoogle /> Google ile Giris Yap</button>
+                <button onClick={loginWithGoogle} className='google-button'> <FaGoogle /> Google ile Giris Yap</button>
                 <button onClick={login} className='login-button'>Giris Yap</button>
                 <button onClick={register} className='register-button'>Kaydol</button>
             </div>
