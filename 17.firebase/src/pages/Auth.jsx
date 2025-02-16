@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import { FaGoogle } from "react-icons/fa";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { auth } from '../Firebase'
+import { useNavigate } from 'react-router-dom';
 
 function Auth() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const register = async () => {
         try {
-            debugger
             const response = await createUserWithEmailAndPassword(auth, email, password)
             const user = response.user;
             if (user) {
@@ -25,6 +26,20 @@ function Auth() {
         }
     }
 
+    const login = async () => {
+        try {
+            const response = await signInWithEmailAndPassword(auth, email, password)
+            const user = response.user;
+            if (user) {
+                navigate('/');//islem basariliysa home'a yonlendirilsin
+            }
+        }
+        catch (error) {
+            toast.error("Giris yapilamadi" + error.message);
+        }
+    }
+
+
     return (
         <div className='auth'>
             <h3 className='auth-header'>Giris Yap / Kaydol</h3>
@@ -34,7 +49,7 @@ function Auth() {
             </div>
             <div className='button-div'>
                 <button className='google-button'> <FaGoogle /> Google ile Giris Yap</button>
-                <button className='login-button'>Giris Yap</button>
+                <button onClick={login} className='login-button'>Giris Yap</button>
                 <button onClick={register} className='register-button'>Kaydol</button>
             </div>
         </div>
